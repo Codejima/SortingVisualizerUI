@@ -1,0 +1,44 @@
+﻿<Window x:Class="SortingVisualizerUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SortingVisualizerUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1012" Width="1800"
+        Background="Gray">
+    <!-- select algorithm -->
+    <!-- set number of elements -->
+    <!-- set delay of visualization/sorting -->
+    <!-- start sorting visualization -->
+    <!-- stop sorting visualization -->
+    <!-- give out results: time, comparisons, swaps -->
+    <StackPanel Name="panel" Orientation="Vertical">
+        <TabControl Name="tabs" Background="Gray">
+            <TabItem Name="selectionTab" Header="Selection Sort" TabIndex="2">
+                <StackPanel Name="selectionPanel" Orientation="Horizontal" Height="800" Width="1700">
+                    <Rectangle/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Name="bubbleTab" Header="Bubble Sort" TabIndex="3">
+                <StackPanel Name="bubblePanel" Orientation="Horizontal" Height="800" Width="1700">
+                </StackPanel>
+            </TabItem>
+            <TabItem Name="insertionTab" Header="Insertion Sort" TabIndex="4">
+                <StackPanel Name="insertionPanel" Orientation="Horizontal" Height="800" Width="1700">
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+        <StackPanel Orientation="Horizontal">
+            <Label Margin="10, 10, 10, 10">Number of Bars</Label>
+            <TextBox Name="BarBox" Margin="10, 10, 10, 10" Width="80" Height="20">Count</TextBox>
+            <Button Name="updateBars" Margin="10, 10, 0, 10" Width="80" Height="25" Click="UpdateSortingChanges">Update</Button>
+            <Label Margin="100, 10, 10, 10">Delay</Label>
+            <TextBox Name="DelayBox" Margin="10, 10, 10, 10" Width="80" Height="20">Seconds</TextBox>
+            <Button Name="updateDelay" Margin="10, 10, 0, 10" Width="80" Height="25" Click="UpdateSortingChanges">Update</Button>
+            <Button Name="btnStart" Content="Start" Margin="850, 10, 10, 10" Width="80" Height="25" Click="btnStart_Click"/>
+            <Button Name="btnStop" Content="Stop" Margin="10, 10, 10, 10" Width="80" Height="25"/>
+            <Button Name="btnReset" Content="Reset" Margin="10, 10, 10, 10" Width="80" Height="25"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
